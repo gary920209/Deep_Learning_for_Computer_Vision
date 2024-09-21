@@ -57,9 +57,8 @@ if __name__ == '__main__':
     optimizer = optim.Adam(model.parameters(), lr=0.001)
     
     # Learning rate scheduler
-    num_epochs = 100
-    scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(
-        optimizer, T_max=num_epochs * len(train_loader), eta_min=1e-6
-    )
+    num_epochs = 150
+    scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='min', factor=0.1, patience=5, verbose=True)
+
     train_model(model, train_loader, val_loader, criterion, optimizer, scheduler, num_epochs) 
     validate_model(model, val_loader)
