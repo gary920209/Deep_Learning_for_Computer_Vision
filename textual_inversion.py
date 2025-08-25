@@ -257,7 +257,7 @@ if __name__ == '__main__':
     ddim_steps = 50
     ddim_eta = 0.0
     models_path = 'models'
-    train_data_dir = 'path/to/train/data'
+    train_data_dir = './train_data/new_concept'
     resolution = 512
     repeats = 100
     center_crop = False

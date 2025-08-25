@@ -349,10 +349,10 @@ if __name__ == "__main__":
     tf = transforms.Compose(
         [transforms.ToTensor()]
     ) 
-    train_mnistm_dir = "b10901091/dlcv-fall-2024-hw2-gary920209/hw2_data/digits/mnistm/data"
-    train_mnistm_dir_csv = "b10901091/dlcv-fall-2024-hw2-gary920209/hw2_data/digits/mnistm/train.csv"
-    train_svhn_dir = "b10901091/dlcv-fall-2024-hw2-gary920209/hw2_data/digits/svhn/data"
-    train_svhn_dir_csv = "b10901091/dlcv-fall-2024-hw2-gary920209/hw2_data/digits/svhn/train.csv"
+    train_mnistm_dir = "./hw2_data/digits/mnistm/data"
+    train_mnistm_dir_csv = "./hw2_data/digits/mnistm/train.csv"
+    train_svhn_dir = "./hw2_data/digits/svhn/data"
+    train_svhn_dir_csv = "./hw2_data/digits/svhn/train.csv"
     
     dataset = ImageDataset(
         mnistm_path=train_mnistm_dir,

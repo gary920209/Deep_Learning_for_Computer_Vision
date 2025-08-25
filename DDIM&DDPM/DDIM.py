@@ -104,8 +104,8 @@ class DDIM(nn.Module):
 def out_img(img_num=10, eta=0):
     n_T = 1000
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    Unet_pt = 'b10901091/dlcv-fall-2024-hw2-gary920209/hw2_data/face/UNet.pt'
-    save_dir = 'b10901091/dlcv-fall-2024-hw2-gary920209/p2/output/'
+    Unet_pt = './hw2_data/face/UNet.pt'
+    save_dir = './p2/output/'
     model = UNet().to(device)
     model.load_state_dict(torch.load(Unet_pt))
     ddim = DDIM(model, timesteps=1000, beta_schedule=beta_scheduler())

@@ -27,18 +27,18 @@ if __name__ == '__main__':
         transforms.ToTensor(),  
         transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
     ])
-    train_dataset = OfficeHomeDatasetCV2(csv_file='b10901091/dlcv-fall-2024-hw1-gary920209/hw1_data/p1_data/office/train.csv',
-                                    root_dir='b10901091/dlcv-fall-2024-hw1-gary920209/hw1_data/p1_data/office/train',
+    train_dataset = OfficeHomeDatasetCV2(csv_file='./hw1_data/p1_data/office/train.csv',
+                                    root_dir='./hw1_data/p1_data/office/train',
                                     transform=transform)
     train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)
-    val_dataset = OfficeHomeDatasetCV2(csv_file='b10901091/dlcv-fall-2024-hw1-gary920209/hw1_data/p1_data/office/val.csv',
-                                    root_dir='b10901091/dlcv-fall-2024-hw1-gary920209/hw1_data/p1_data/office/val',
+    val_dataset = OfficeHomeDatasetCV2(csv_file='./hw1_data/p1_data/office/val.csv',
+                                    root_dir='./hw1_data/p1_data/office/val',
                                     transform=transform)
     val_loader = DataLoader(val_dataset, batch_size=64, shuffle=True)
 
     # Load the pre-trained model
     model = OfficeHomeClassifier()
-    pretrained_model_path = 'b10901091/dlcv-fall-2024-hw1-gary920209/hw1_data/p1_data/improved-net.pt'
+    pretrained_model_path = './hw1_data/p1_data/improved-net.pt'
     pretrained_dict = torch.load(pretrained_model_path)
     model_dict = model.state_dict()
     
