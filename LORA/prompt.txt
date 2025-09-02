@@ -1,0 +1,8 @@
+Give me one sentence that has a subject, a verb, and possibly an object, the environment, and some details. 
+
+Please read the examples:
+1. "A large combination pizza with two pieces gone."
+2. "A man watches the water while a seagull watches him.
+3. "A blue plane flying up into the sky as the sun shines behind it."
+
+Now, please provide the descriptive detailed caption of the image provided at the beginning.
